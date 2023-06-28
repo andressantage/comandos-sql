@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campuslands</title>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+	<script src="prism.js"></script>
+</head>
+<body>
+    <h1>PHP: otros conceptos:</h1>
+<pre><code class="language-php">
+    
+</code></pre>
+
+    <h1>PHP: arrays</h1>
+<p>Correrlo en PHP para observar el resultado de cada ejemplo.</p>
+<pre><code class="language-php">
+Comando SQL:
+
+MySQL abrir:
+
+mysql -u campus -p //abrir interfaz mysql
+campus 2023 //esta es la contraseña
+CREATE DATABASE nombre_database //crear base de datos
+DROP DATABASE nombre_database //elimina la base de datos
+USE nombre_database //designar para usar cierta base de datos de ahi para todo
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    correo VARCHAR(255),
+    contra VARCHAR(50),
+    fecha_nacimiento DATE,
+    celular VARCHAR(20),
+    fecha_registro DATETIME,
+    PRIMARY KEY (id)
+); //crear tabla 
+
+INSERT INTO tabla VALUES('andres','casa',1); //inserta valores a tabla
+INSERT INTO tabla (nombre, objeto, numero) VALUES('andres', 'casa', 1); //otra forma para insertar valores a tabla
+
+
+SELECT * FROM usuarios; //consulta lo que hay en la tabla usuarios
+NOW() //entrega la fecha y hora actual
+SELECT * FROM tabla WHERE palabra LIKE '%word%'; //devuelve todas las filas que coincide con la palabra word
+
+
+//PARA DATABASE
+
+SHOW DATABASES; //muestra todas las base de datos
+CREATE DATABASE mi_base; //crea una base de datos
+DROP DATABASE mi_base; //elimina una base de datos
+USE mi_base; //selecciona base de datos que se administrara
+
+//PARA TABLAS
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    correo VARCHAR(255),
+    contra VARCHAR(50),
+    fecha_nacimiento DATE,
+    celular VARCHAR(20),
+    fecha_registro DATETIME,
+    PRIMARY KEY (id)
+); //crear tabla 
+
+CREATE TABLE usuarios (
+    id INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    CONSTRAINT pk_usuarios PRIMARY KEY (id) //otra forma de definir llave primaria
+); //crear tabla 
+
+INSERT INTO table_name (col1, col2)
+VALUES ('val1','val2'); //para insertar valores a una tabla
+
+UPDATE table_name
+SET col1='val1', col2='val2'
+WHERE id=5; //para modificar un valor
+
+DELETE FROM table_name WHERE id=5; //para eliminar un dato en una tabla
+
+SELECT col1, col2 FROM table_name; //consultar dos columnas de una tabla
+
+SELECT col1, col2
+FROM table_name
+WHERE id=2; //consultar dos columnas  de una tabla segun id=1
+
+ALTER TABLE cliente ADD emailCliente varchar(100);//modifica estructura de una tabla
+ALTER TABLE cliente ADD fechaNac date;//modifica estructura de una tabla
+
+ALTER TABLE table_name
+DROP COLUMN column_name; //esos dos elimina una columna de una tabla
+
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name; //renombrar una columna
+
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype; //modificar el tipo de dato
+
+
+ALTER TABLE persons
+ADD CONSTRAINT pk_person PRIMARY KEY (idCliente); //añade llave primaria a una tabla ya creada
+//el pk_person: hace referencia al nombre de la condicion y se aplica a la columna idCliente
+
+SHOW TABLES; //muestra las tablas de una base de datos
+DESCRIBE nombre_tabla; //visualiza la estructura de la tabla
+</code></pre>
+
+<p>_________________________________________________</p>
+</body>
+</html>
