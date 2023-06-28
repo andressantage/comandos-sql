@@ -100,7 +100,15 @@ RENAME COLUMN old_name to new_name; //renombrar una columna
 ALTER TABLE table_name
 MODIFY COLUMN column_name datatype; //modificar el tipo de dato
 
+ALTER TABLE tabla_principal
+ADD CONSTRAINT fk_tabla_referenciada1
+FOREIGN KEY (fk_tabla_referenciada1) REFERENCES tabla_referenciada1 (id_referenciada1); //para llave foranea
+//tabla_principal: tabla que guardara la llave primaria y sera en esta una llave foranea
+//tabla_referenciada1: tabla que tiene la llave primaria
+//id_referenciada1: columna de la tabla con llave primaria
+//fk_tabla_referenciada1 y fk_tabla_referenciada1: se hace como mensaje
 
+	
 ALTER TABLE persons
 ADD CONSTRAINT pk_person PRIMARY KEY (idCliente); //añade llave primaria a una tabla ya creada
 //el pk_person: hace referencia al nombre de la condicion y se aplica a la columna idCliente
